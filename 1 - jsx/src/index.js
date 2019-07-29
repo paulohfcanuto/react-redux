@@ -5,6 +5,10 @@ function getLabel() {
     return 'Enter name here:';
 }
 
+function getCurrentTime() {
+    return (new Date()).toLocaleDateString()
+}
+
 const App = () => {
     const button = 'Click me!';
     const style = { backgroundColor: 'blue',  color: 'white' };
@@ -18,6 +22,8 @@ const App = () => {
             <button style={style}>
                 {button}
             </button>
+            <br/>
+            <h3>{getCurrentTime()}</h3>
         </div>
     );
 };
