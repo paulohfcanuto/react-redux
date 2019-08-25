@@ -10,7 +10,7 @@ class App extends React.Component {
     }
 
     componentDidUpdate() {
-        console.log('My component App was just updated');
+        console.log('The componentDidUpdate() method was called');
     }
 
     getGeoLocation() {
