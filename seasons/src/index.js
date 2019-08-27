@@ -26,7 +26,7 @@ class App extends React.Component {
         if (this.state.lat !== null && this.state.errorMessage === ''){
             return <SeasonDisplay lat={ this.state.lat }/>
         }
-        if (this.state.lat === null && this.state.errorMessage !== ''){
+        if ((this.state.lat === null || this.state.lat === undefined) && this.state.errorMessage !== ''){
             return <ErrorPage message={ this.state.errorMessage }/>
         }
         return <Spinner message={ "Por favor aceite o acesso à sua localização" }/>
