@@ -19,10 +19,7 @@ class App extends React.Component {
 
     onSearchSubmit = async (term) => {
         const response = await unsplash.get('/search/photos', {
-            params: { query: term },
-            headers: {
-                Authorization: 'Client-ID edc97bcffa4097f5872b6d660bb539351c53e9a19a92ccaeebee389080074b24'
-            }
+            params: { query: term }
         });
 
         this.setState( {images: response.data.results});
